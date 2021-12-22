@@ -1,17 +1,13 @@
-import { Routes } from "./Routes/routes";
+import React from "react";
+import { BrowserRouter } from "react-router-dom";
+import { Routes } from "./Routes";
 
 function App() {
   return (
-    <>
-      {/* <BrowserRouter> */}
-      <div>
-        <h2>Welcome to React App</h2>
-        <h3>Date : {new Date().toDateString()}</h3>
-      </div>
-      {/* <Routes /> */}
-      {/* </BrowserRouter> */}
-    </>
+    <BrowserRouter>
+      <Routes />
+    </BrowserRouter>
   );
 }
 
-export default App;
+export { App };

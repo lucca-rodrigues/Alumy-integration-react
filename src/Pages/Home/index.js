@@ -1,6 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
+const data = [
+  {
+    id: 1,
+    name: "Like",
+    icon: "👍",
+    onselect: "console.log('Like')",
+  },
+  {
+    id: 2,
+    name: "Love",
+    icon: "❤️",
+    onselect: "console.log('Love')",
+  },
+];
 
-const Home = ({ data }) => {
+const Home = () => {
   console.log("data", data);
   return (
     <>
