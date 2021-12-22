@@ -1,9 +1,0 @@
-{
-  "compilerOptions": {
-    "baseUrl": "src",
-    "target": "es5"
-  },
-
-  "exclude": ["node_modules", "src", "**/*.test.js"],
-  "include": ["src", "**/*.js"]
-}

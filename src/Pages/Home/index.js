@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 const data = [
   {
     id: 1,
@@ -25,6 +26,8 @@ const Home = () => {
             {item.name} - {item.icon}
           </h1>
         ))}
+
+      <Link to="details">Ir para detalhes</Link>
     </>
   );
 };
