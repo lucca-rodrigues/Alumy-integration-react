@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import ReactDOM from "react-dom";
 // import App from "./app";
 import { ReactionsComponent } from "./Components/Reactions";
@@ -22,13 +22,15 @@ const data = [
 ];
 ReactDOM.render(
   <React.StrictMode>
-    {/* <ClubContentProvider> */}
-    <Home
-      data={data}
-      // wherever={document.getElementById("app").getAttribute("data-wherever")}
-      // onselect={document.getElementById("app").getAttribute("data-on-select")}
-    />
-    {/* </ClubContentProvider> */}
+    <ClubContentProvider>
+      <div>
+        <Home
+          data={data}
+          // wherever={document.getElementById("app").getAttribute("data-wherever")}
+          // onselect={document.getElementById("app").getAttribute("data-on-select")}
+        />
+      </div>
+    </ClubContentProvider>
     {/* <Home /> */}
   </React.StrictMode>,
   document.getElementById("app")
