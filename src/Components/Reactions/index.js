@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FacebookSelector } from "@charkour/react-reactions";
 
-function ReactionsComponent(wherever, onselect) {
+const ReactionsComponent = (wherever, onselect) => {
   const [selectedIcon, setSelectedIcon] = useState("");
   function HandleClick(e) {
     console.log("Selected:", e);
@@ -22,6 +22,6 @@ function ReactionsComponent(wherever, onselect) {
       <p>{wherever?.wherever}</p>
     </div>
   );
-}
+};
 
 export { ReactionsComponent };

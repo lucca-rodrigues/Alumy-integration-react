@@ -1,7 +1,7 @@
 {
   "name": "alumy-integration-react",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "New page for subscribers in React to Alumy",
   "main": "./src/index.js",
   "type:": "module",
   "scripts": {
@@ -29,9 +29,14 @@
   },
   "dependencies": {
     "@material-ui/core": "^4.12.3",
+    "@mui/material": "^5.2.5",
+    "@mui/styled-engine-sc": "^5.1.0",
     "babel-preset-react-app": "^3.1.2",
+    "install": "^0.13.0",
+    "npm": "^8.3.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-router-dom": "^6.2.1",
     "styled-components": "^5.3.3",
     "terser-webpack-plugin": "^5.2.5",
     "webpack-dev-server": "^4.5.0"

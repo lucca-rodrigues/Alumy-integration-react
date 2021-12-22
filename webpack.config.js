@@ -15,7 +15,7 @@ module.exports = {
     },
     port: 3000,
     devMiddleware: {
-      publicPath: "https://localhost:3000",
+      publicPath: "https://localhost:3000/",
     },
     hot: "only",
   },
