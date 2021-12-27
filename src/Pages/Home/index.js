@@ -1,13 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useClubContent } from "../../Contexts/useClubContent";
 
-const Home = (data) => {
-  console.log("data", data);
+const Home = () => {
+  const { clubData } = useClubContent();
+  console.log("data", clubData);
   return (
     <>
       <h1>Teste Home</h1>
-      {data &&
-        data.map((item) => (
+      {clubData &&
+        clubData.map((item) => (
           <h1 key={item.id}>
             {item.name} - {item.icon}
           </h1>
