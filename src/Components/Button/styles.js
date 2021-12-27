@@ -1,7 +1,7 @@
 import { Button } from "@mui/material";
-import { makeStyles } from "@mui/styles";
+import { withStyles } from "@mui/styles";
 
-export const MaterialUIButton = makeStyles(() => ({
+export const MaterialUIButton = withStyles(() => ({
   root: {
     backgroundColor: "#fafafa",
   },

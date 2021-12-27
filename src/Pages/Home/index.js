@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Button } from "../../Components/Button";
 import { useClubContent } from "../../Contexts/useClubContent";
 
 const Home = () => {
@@ -14,6 +15,8 @@ const Home = () => {
             {item.name} - {item.icon}
           </h1>
         ))}
+
+      <Button title="Test Button" />
 
       <Link to="details">Ir para detalhes</Link>
     </>
