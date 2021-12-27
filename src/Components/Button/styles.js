@@ -3,6 +3,6 @@ import { withStyles } from "@mui/styles";
 
 export const MaterialUIButton = withStyles(() => ({
   root: {
-    backgroundColor: "#fafafa",
+    backgroundColor: "#000!important",
   },
 }))(Button);

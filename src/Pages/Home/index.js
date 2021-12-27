@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "../../Components/Button";
+import { Card } from "../../Components/Card";
 import { useClubContent } from "../../Contexts/useClubContent";
 
 const Home = () => {
@@ -17,6 +18,7 @@ const Home = () => {
         ))}
 
       <Button title="Test Button" />
+      <Card> Teste</Card>
 
       <Link to="details">Ir para detalhes</Link>
     </>
