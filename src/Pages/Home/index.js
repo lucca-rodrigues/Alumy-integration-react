@@ -1,21 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-const data = [
-  {
-    id: 1,
-    name: "Like",
-    icon: "👍",
-    onselect: "console.log('Like')",
-  },
-  {
-    id: 2,
-    name: "Love",
-    icon: "❤️",
-    onselect: "console.log('Love')",
-  },
-];
 
-const Home = () => {
+const Home = (data) => {
   console.log("data", data);
   return (
     <>
