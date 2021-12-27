@@ -21,6 +21,7 @@ const Home = () => {
       <Card bgImage="https://image.tmdb.org/t/p/original//5hNcsnMkwU2LknLoru73c76el3z.jpg">
         Teste
       </Card>
+      <Card>Teste Card 2</Card>
 
       <Link to="details">Ir para detalhes</Link>
     </>
