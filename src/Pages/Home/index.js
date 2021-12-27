@@ -18,7 +18,9 @@ const Home = () => {
         ))}
 
       <Button title="Test Button" />
-      <Card> Teste</Card>
+      <Card bgImage="https://image.tmdb.org/t/p/original//5hNcsnMkwU2LknLoru73c76el3z.jpg">
+        Teste
+      </Card>
 
       <Link to="details">Ir para detalhes</Link>
     </>
