@@ -4,9 +4,10 @@ import { withStyles } from "@mui/styles";
 export const MaterialUICard = withStyles(() => ({
   root: {
     padding: 30,
-    margin: "10px 0px",
+    margin: (props) => props.margin ?? 0,
+    height: (props) => props.height ?? "100%",
     backgroundColor: (props) => props.bgColor ?? "#fff",
     backgroundImage: (props) => props.bgImage && `url(${props.bgImage})`,
-    backgroundSize: (props) => props.bgImage && props.bgSize && "cover",
+    backgroundSize: "cover",
   },
 }))(Card);

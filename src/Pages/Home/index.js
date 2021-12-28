@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+// import { Banner } from "../../Components/Banner";
 import { Button } from "../../Components/Button";
 import { Card } from "../../Components/Card";
 import { useClubContent } from "../../Contexts/useClubContent";
@@ -9,6 +10,7 @@ const Home = () => {
   console.log("data", clubData);
   return (
     <>
+      {/* <Banner /> */}
       <h1>Teste Home</h1>
       {clubData &&
         clubData.map((item) => (
