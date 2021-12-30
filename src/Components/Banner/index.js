@@ -36,7 +36,10 @@ const Banner = ({ title, url, description, bgImage }) => {
               <Button title="More info" icon={<MdInfoOutline size={20} />} />
             </Grid>
             <Grid item lg={4} mt={2}>
-              <Typography color="#fff" variant="h6">
+              <Typography
+                color="#fff"
+                style={{ fontWeight: 500, fontSize: 19 }}
+              >
                 To carry out the biggest heist in history, a mysterious man
                 called The Professor recruits a band of eight robbers who have a
                 single characteristic: n...
