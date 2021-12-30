@@ -7,6 +7,6 @@ export const Container = withStyles((theme) => ({
     margin: 0,
     padding: 0,
     color: theme.colors.white,
-    height: "70vh",
+    height: "80vh",
   },
 }))(Grid);
