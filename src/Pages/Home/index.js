@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 // import { Banner } from "../../Components/Banner";
 import { Button } from "../../Components/Button";
 import { Card } from "../../Components/Card";
+import { Carousel } from "../../Components/Carousel";
 import { useClubContent } from "../../Contexts/useClubContent";
 
 const Home = () => {
@@ -11,7 +12,7 @@ const Home = () => {
   return (
     <>
       {/* <Banner /> */}
-      <h1>Teste Home</h1>
+      <Carousel />
       {clubData &&
         clubData.map((item) => (
           <h1 key={item.id}>
