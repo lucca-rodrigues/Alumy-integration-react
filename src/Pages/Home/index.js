@@ -11,7 +11,6 @@ const Home = () => {
   console.log("data", clubData);
   return (
     <>
-      {/* <Banner /> */}
       <Carousel />
       {clubData &&
         clubData.map((item) => (

@@ -10,7 +10,7 @@ const Banner = ({ title, url, description, bgImage }) => {
     <>
       <Container style={{ display: "flex" }}>
         <Card
-          bgImage="https://image.tmdb.org/t/p/original//gFZriCkpJYsApPZEF3jhxL4yLzG.jpg"
+          bgImage="https://image.tmdb.org/t/p/original/gFZriCkpJYsApPZEF3jhxL4yLzG.jpg"
           bgColor="#141414"
           padding="60px"
         >
