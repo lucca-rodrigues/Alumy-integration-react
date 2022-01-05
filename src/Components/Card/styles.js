@@ -9,6 +9,7 @@ export const MaterialUICard = withStyles(() => ({
     backgroundColor: (props) => props.bgColor ?? "#fff",
     backgroundImage: (props) => props.bgImage && `url(${props.bgImage})`,
     backgroundSize: (props) => props.bgSize ?? "cover",
+    backgroundRepeat: "no-repeat",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",

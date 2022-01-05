@@ -27,20 +27,19 @@ const Carousel = () => {
         >
           <CarouselItem>
             {cardsList.map((item) => (
-              <SwiperSlide key={item.id}>
+              <SwiperSlide key={item?.id}>
                 <Card
                   bgSize="contain"
-                  bgImage={`${baseUrl}${item.backdrop_path}`}
+                  bgImage={`${baseUrl}${item?.backdrop_path}`}
                 >
-                  Teste
+                  <div className="slider-text">
+                    <p>{item?.original_title}</p>
+                    <strong>Movies</strong>
+                  </div>
                 </Card>
               </SwiperSlide>
             ))}
           </CarouselItem>
-          {/* <SwiperSlide>Slide 1</SwiperSlide>
-          
-          <SwiperSlide>Slide 3</SwiperSlide>
-          <SwiperSlide>Slide 4</SwiperSlide> */}
         </CarouselBox>
       </CarouselContainer>
     </>
