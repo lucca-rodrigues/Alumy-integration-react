@@ -6,7 +6,7 @@ import { CustomBg } from "../../Components/CustomBg";
 
 import { useClubContent } from "../../Contexts/useClubContent";
 import { Loading } from "../../Components/Loading";
-import { BannerSlider } from "./Components/BannerSlider";
+import { BannerCarousel } from "./Components/BannerCarousel";
 import { setTimeLoader } from "../../Utils/setTimeLoader";
 
 const Home = () => {
@@ -29,7 +29,7 @@ const Home = () => {
 
   return (
     <>
-      <BannerSlider data={bannersData} />
+      <BannerCarousel data={bannersData} />
       <CustomBg>
         <Box style={{ backgroundColor: "#141414" }}>
           <Box style={{ marginBottom: 100 }}>

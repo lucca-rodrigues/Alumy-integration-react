@@ -13,13 +13,12 @@ const Carousel = ({ data, customPath, ...props }) => {
       <CarouselContainer>
         <CarouselBox
           modules={[Navigation]}
-          // spaceBetween={0}
           slidesPerView={6}
           navigation={true}
           pagination={{ clickable: true }}
           scrollbar={{ draggable: true }}
-          onSwiper={(swiper) => console.log(swiper)}
-          onSlideChange={() => console.log("slide change")}
+          onSwiper={(swiper) => {}}
+          onSlideChange={() => {}}
           {...props}
         >
           <CarouselItem>

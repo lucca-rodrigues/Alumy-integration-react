@@ -13,5 +13,9 @@ export const MaterialUICard = withStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
+
+    [theme.breakpoints.down("lg")]: {
+      backgroundPosition: "center",
+    },
   },
 }))(Card);

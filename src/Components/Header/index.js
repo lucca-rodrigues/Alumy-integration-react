@@ -1,11 +1,15 @@
-import React, { useState } from "react";
-import { Grid } from "@mui/material";
+import React, { useCallback, useEffect, useState } from "react";
+import { Grid, Hidden } from "@mui/material";
 import { Container } from "./styles";
 import { Logo } from "./Components/Logo";
 import { Links } from "./Components/Links";
+import { MobileMenu } from "./Components/MobileMenu";
+import { MobileMenuIcons } from "./Components/MobileMenuIcons";
 
 const Header = () => {
   const [headerClass, setHeaderClass] = useState("header");
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const [isOpenMenu, setIsOpenMenu] = useState(false);
 
   window.onscroll = () => {
     if (window.scrollY > 150) {
@@ -14,6 +18,20 @@ const Header = () => {
       setHeaderClass("header");
     }
   };
+
+  useEffect(() => {
+    if (window.innerWidth < 768) {
+      setHeaderClass("header-mobile");
+      setShowMobileMenu(true);
+    }
+    setHeaderClass("header-fixed");
+  }, []);
+
+  const menuIcon = useCallback(() => {
+    console.log("menuIcon");
+    setIsOpenMenu(!isOpenMenu);
+  }, [isOpenMenu]);
+
   return (
     <Container
       container
@@ -25,12 +43,26 @@ const Header = () => {
       <Grid item xs={2}>
         <Logo />
       </Grid>
-      <Grid item xs={4}>
-        <Links />
-      </Grid>
-      <Grid item xs={6} style={{ textAlign: "right" }}>
-        User menu
-      </Grid>
+      <Hidden lgDown>
+        <Grid item xs={4}>
+          <Links />
+        </Grid>
+        <Grid item xs={6} style={{ textAlign: "right" }}>
+          User menu
+        </Grid>
+      </Hidden>
+      <Hidden lgUp>
+        <Grid
+          item
+          xs={10}
+          textAlign="right"
+          className="mobile-menu-icons"
+          onClick={menuIcon}
+        >
+          <MobileMenuIcons isOpenMenu={isOpenMenu} />
+        </Grid>
+      </Hidden>
+      <MobileMenu isOpenMenu={isOpenMenu} setIsOpenMenu={setIsOpenMenu} />
     </Container>
   );
 };

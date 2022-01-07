@@ -4,7 +4,7 @@ import SwiperCore, { Autoplay } from "swiper";
 import { Banner } from "../../../../Components/Banner";
 SwiperCore.use([Autoplay]);
 
-const BannerSlider = ({ data }) => {
+const BannerCarousel = ({ data }) => {
   return (
     <Swiper
       centeredSlides={true}
@@ -23,4 +23,4 @@ const BannerSlider = ({ data }) => {
   );
 };
 
-export { BannerSlider };
+export { BannerCarousel };

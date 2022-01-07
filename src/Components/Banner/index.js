@@ -18,7 +18,7 @@ const Banner = ({ data, theme }) => {
             alignItems="center"
             className="banner-container"
           >
-            <Grid item lg={12}>
+            <Grid item lg={6} md={12} sm={12}>
               <Typography
                 component="h1"
                 variant="h2"
@@ -28,11 +28,20 @@ const Banner = ({ data, theme }) => {
                 {title}
               </Typography>
             </Grid>
-            <Grid item lg={12} mt={5}>
-              <Button title="Play" warning icon={<MdPlayArrow size={20} />} />
-              <Button title="More info" icon={<MdInfoOutline size={20} />} />
+            <Grid item lg={12} md={12} sm={12} mt={5}>
+              <Button
+                mt={5}
+                title="Play"
+                warning
+                icon={<MdPlayArrow size={20} />}
+              />
+              <Button
+                mt={5}
+                title="More info"
+                icon={<MdInfoOutline size={20} />}
+              />
             </Grid>
-            <Grid item lg={4} mt={2}>
+            <Grid item lg={4} md={6} sm={12} mt={2}>
               <Typography
                 color="#fff"
                 style={{ fontWeight: 500, fontSize: 19 }}
