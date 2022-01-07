@@ -28,7 +28,14 @@ const Banner = ({ data, theme }) => {
                 {title}
               </Typography>
             </Grid>
-            <Grid item lg={12} md={12} sm={12} mt={5}>
+            <Grid
+              item
+              lg={12}
+              md={12}
+              sm={12}
+              mt={5}
+              className="banner-button-actions"
+            >
               <Button
                 mt={5}
                 title="Play"
@@ -41,7 +48,14 @@ const Banner = ({ data, theme }) => {
                 icon={<MdInfoOutline size={20} />}
               />
             </Grid>
-            <Grid item lg={4} md={6} sm={12} mt={2}>
+            <Grid
+              item
+              lg={4}
+              md={6}
+              sm={12}
+              mt={2}
+              className="banner-description"
+            >
               <Typography
                 color="#fff"
                 style={{ fontWeight: 500, fontSize: 19 }}

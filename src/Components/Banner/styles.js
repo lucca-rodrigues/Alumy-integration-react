@@ -9,5 +9,28 @@ export const Container = withStyles((theme) => ({
     color: theme.colors.white,
     height: "80vh",
     minHeight: "600px",
+
+    [theme.breakpoints.down("sm")]: {
+      height: "100vh",
+      minHeight: "800px",
+      "& .banner-button-actions": {
+        marginTop: 100,
+        order: 1,
+        display: "flex",
+      },
+      "& .banner-description": {
+        order: 0,
+      },
+    },
+
+    [theme.breakpoints.down(370)]: {
+      "& .banner-button-actions": {
+        display: "block",
+
+        "& button": {
+          marginTop: "20px",
+        },
+      },
+    },
   },
 }))(Grid);

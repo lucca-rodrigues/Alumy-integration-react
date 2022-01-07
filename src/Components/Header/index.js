@@ -21,7 +21,6 @@ const Header = () => {
   useEffect(() => {
     if (window.innerWidth < 768) {
       setHeaderClass("header-mobile");
-      setIsOpenMenu(true);
     }
     setHeaderClass("header-fixed");
   }, []);
