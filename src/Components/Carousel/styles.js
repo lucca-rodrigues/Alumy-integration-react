@@ -12,17 +12,16 @@ const CarouselContainer = styled("div")({
 });
 
 const CarouselBox = styled(Swiper)({
-  height: 130,
-  boxShadow: "9px -103px 83px 14px #141414",
-  backgroundColor: "#141414",
-  display: "block",
-  /* position: relative */
-  zIndex: 9999999,
+  height: (props) => props.height ?? 130,
+  // boxShadow: "9px -103px 83px 14px #141414",
+  // backgroundColor: "#141414",
+  // display: "block",
+  // zIndex: 9999999,
 
   "& .swiper-slide": {
-    height: "100px",
+    height: (props) => props.height ?? "100px",
 
-    boxShadow: "9px -103px 83px 14px #141414",
+    // boxShadow: "9px -103px 83px 14px #141414",
     backgroundColor: "#141414",
     display: "block",
     margin: "5px!important",
@@ -32,7 +31,7 @@ const CarouselBox = styled(Swiper)({
     "&:hover": {
       transform: "scale(1.1)",
       transition: "all 0.4s ease",
-      height: 200,
+      height: (props) => props.height ?? 200,
       zIndex: 1,
 
       "& .slider-text": {
@@ -49,7 +48,7 @@ const CarouselBox = styled(Swiper)({
     "& .slider-text": {
       color: "#fff",
       width: "100%",
-      height: "100%",
+      height: (props) => props.height ?? "100%",
       fontSize: "15px",
       fontWeight: "bold",
       textAlign: "left",

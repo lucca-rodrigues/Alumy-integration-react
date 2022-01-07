@@ -5,3 +5,10 @@ a{
   text-decoration: none;
   color: #fff;
 }
+
+.MuiBox-root.css-0{
+  background-color: #141414!important;
+  box-shadow: 77px 112px 80px 124px #141414;
+  z-index: 99999;
+  position: relative;
+}

@@ -1,4 +1,4 @@
-const cardsList = [
+const mockRelateds = [
   {
     adult: false,
     backdrop_path: "/5hNcsnMkwU2LknLoru73c76el3z.jpg",
@@ -341,4 +341,4 @@ const cardsList = [
   },
 ];
 
-export { cardsList };
+export { mockRelateds };

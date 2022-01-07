@@ -6,11 +6,11 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { CarouselBox, CarouselContainer, CarouselItem } from "./styles";
-import { cardsList } from "./mock";
+
 import { Card } from "../Card";
 import { SwiperSlide } from "swiper/react";
 
-const Carousel = () => {
+const Carousel = ({ data, customPath, ...props }) => {
   const baseUrl = "https://image.tmdb.org/t/p/original/";
   return (
     <>
@@ -24,13 +24,16 @@ const Carousel = () => {
           scrollbar={{ draggable: true }}
           onSwiper={(swiper) => console.log(swiper)}
           onSlideChange={() => console.log("slide change")}
+          {...props}
         >
           <CarouselItem>
-            {cardsList.map((item) => (
+            {data?.map((item) => (
               <SwiperSlide key={item?.id}>
                 <Card
                   bgSize="contain"
-                  bgImage={`${baseUrl}${item?.backdrop_path}`}
+                  bgImage={`${baseUrl}${
+                    item?.[customPath] ?? item?.backdrop_path
+                  }`}
                 >
                   <div className="slider-text">
                     <p>{item?.original_title}</p>
