@@ -7,5 +7,9 @@ export const Container = withStyles((theme) => ({
     color: theme.colors.white,
     position: "fixed",
     zIndex: 9999999,
+
+    [theme.breakpoints.down("lg")]: {
+      background: "#141414",
+    },
   },
 }))(Grid);

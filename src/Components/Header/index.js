@@ -8,7 +8,6 @@ import { MobileMenuIcons } from "./Components/MobileMenuIcons";
 
 const Header = () => {
   const [headerClass, setHeaderClass] = useState("header");
-  const [showMobileMenu, setShowMobileMenu] = useState(false);
   const [isOpenMenu, setIsOpenMenu] = useState(false);
 
   window.onscroll = () => {
@@ -22,13 +21,12 @@ const Header = () => {
   useEffect(() => {
     if (window.innerWidth < 768) {
       setHeaderClass("header-mobile");
-      setShowMobileMenu(true);
+      setIsOpenMenu(true);
     }
     setHeaderClass("header-fixed");
   }, []);
 
   const menuIcon = useCallback(() => {
-    console.log("menuIcon");
     setIsOpenMenu(!isOpenMenu);
   }, [isOpenMenu]);
 
@@ -52,9 +50,10 @@ const Header = () => {
         </Grid>
       </Hidden>
       <Hidden lgUp>
+        <Grid xs={8} />
         <Grid
           item
-          xs={10}
+          xs={2}
           textAlign="right"
           className="mobile-menu-icons"
           onClick={menuIcon}

@@ -15,8 +15,6 @@ const MobileMenu = ({ isOpenMenu = false, setIsOpenMenu }) => {
             style={{
               display: "flex",
               flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "space-around",
               fontWeight: 600,
             }}
             onClick={closeMenu}

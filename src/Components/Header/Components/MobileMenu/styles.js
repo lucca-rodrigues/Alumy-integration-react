@@ -11,5 +11,9 @@ export const Container = withStyles((theme) => ({
     width: "100vw",
     minHeight: "600px",
     zIndex: 9999999999,
+
+    "& a": {
+      margin: "30px 0",
+    },
   },
 }))(Grid);
