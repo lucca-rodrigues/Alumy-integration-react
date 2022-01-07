@@ -1,18 +1,45 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Autoplay } from "swiper";
 import { Banner } from "../../Components/Banner";
 import { Carousel } from "../../Components/Carousel";
 import { CustomBg } from "../../Components/CustomBg";
-import { useClubContent } from "../../Contexts/useClubContent";
-import { mockRelateds, mockTrending, mockBigCarousel } from "../../MocksApi";
+import "swiper/css";
+import "swiper/css/autoplay";
+// import { useClubContent } from "../../Contexts/useClubContent";
+import {
+  mockRelateds,
+  mockTrending,
+  mockBigCarousel,
+  mockBanner,
+} from "../../MocksApi";
+SwiperCore.use([Autoplay]);
 
 const Home = () => {
-  const { clubData } = useClubContent();
-  console.log("data", clubData);
+  mockBanner.forEach((banner) => {
+    console.log(banner);
+  });
+  // const { clubData } = useClubContent();
+
   return (
     <>
-      <Banner />
-      <CustomBg>
+      <Swiper
+        centeredSlides={true}
+        loop={true}
+        // autoplay={true}
+        autoplay={{
+          delay: 10000,
+          // disableOnInteraction: false,
+        }}
+      >
+        {mockBanner?.map((item) => (
+          <SwiperSlide key={item?.id}>
+            <Banner data={item} />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+      <CustomBg style={{ border: "solid red" }}>
         <Box style={{ backgroundColor: "#141414" }}>
           <Box style={{ marginBottom: 100 }}>
             <Typography color="#fff">Top Relateds</Typography>

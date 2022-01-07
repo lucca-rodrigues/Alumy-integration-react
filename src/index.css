@@ -7,10 +7,22 @@ a{
 }
 
 .MuiBox-root.css-0{
-  background-color: #141414!important;
+  /* background-color: #141414!important; */
   box-shadow: 0px -99px 300px 4px #141414;
   z-index: 99999;
   position: relative;
-  padding: 0 0px 50px 20px;
+  /* padding: 0 0px 50px 20px; */
   height: 100%;
+}
+.header{
+  position: fixed;
+  transition: all 0.4s ease;
+  background-color: transparent;
+}
+.header-fixed {
+  position: fixed;
+  transition: all 0.4s ease;
+    background-color: #141414!important;
+
+
 }

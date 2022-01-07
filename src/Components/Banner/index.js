@@ -5,15 +5,12 @@ import { Container } from "./styles";
 import { MdPlayArrow, MdInfoOutline } from "react-icons/md";
 import { Grid, Typography } from "@mui/material";
 
-const Banner = ({ title, url, description, bgImage }) => {
+const Banner = ({ data }) => {
+  const { title, description, bgImage } = data;
   return (
     <>
       <Container style={{ display: "flex" }}>
-        <Card
-          bgImage="https://image.tmdb.org/t/p/original/gFZriCkpJYsApPZEF3jhxL4yLzG.jpg"
-          bgColor="#141414"
-          padding="60px"
-        >
+        <Card bgImage={bgImage} bgColor="#141414" padding="60px">
           <Grid
             container
             direction="row"
@@ -28,7 +25,7 @@ const Banner = ({ title, url, description, bgImage }) => {
                 color="#fff"
                 style={{ fontWeight: 600 }}
               >
-                Money Heist
+                {title}
               </Typography>
             </Grid>
             <Grid item lg={12} mt={5}>
@@ -40,9 +37,7 @@ const Banner = ({ title, url, description, bgImage }) => {
                 color="#fff"
                 style={{ fontWeight: 500, fontSize: 19 }}
               >
-                To carry out the biggest heist in history, a mysterious man
-                called The Professor recruits a band of eight robbers who have a
-                single characteristic: n...
+                {description}
               </Typography>
             </Grid>
           </Grid>
