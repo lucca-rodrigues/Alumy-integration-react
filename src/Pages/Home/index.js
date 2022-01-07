@@ -1,65 +1,56 @@
 import { Box, Typography } from "@mui/material";
-import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Autoplay } from "swiper";
-import { Banner } from "../../Components/Banner";
+import React, { useEffect } from "react";
+
 import { Carousel } from "../../Components/Carousel";
 import { CustomBg } from "../../Components/CustomBg";
-import "swiper/css";
-import "swiper/css/autoplay";
-// import { useClubContent } from "../../Contexts/useClubContent";
-import {
-  mockRelateds,
-  mockTrending,
-  mockBigCarousel,
-  mockBanner,
-} from "../../MocksApi";
-SwiperCore.use([Autoplay]);
+
+import { useClubContent } from "../../Contexts/useClubContent";
+import { Loading } from "../../Components/Loading";
+import { BannerSlider } from "./Components/BannerSlider";
+import { setTimeLoader } from "../../Utils/setTimeLoader";
 
 const Home = () => {
-  mockBanner.forEach((banner) => {
-    console.log(banner);
-  });
-  // const { clubData } = useClubContent();
+  const {
+    bannersData,
+    relatedsData,
+    trendingData,
+    customSizeCarouselData,
+    loading,
+    setLoading,
+  } = useClubContent();
+
+  useEffect(() => {
+    setTimeLoader(setLoading);
+  }, [setLoading]);
+
+  if (loading) {
+    return <Loading />;
+  }
 
   return (
     <>
-      <Swiper
-        centeredSlides={true}
-        loop={true}
-        // autoplay={true}
-        autoplay={{
-          delay: 10000,
-          // disableOnInteraction: false,
-        }}
-      >
-        {mockBanner?.map((item) => (
-          <SwiperSlide key={item?.id}>
-            <Banner data={item} />
-          </SwiperSlide>
-        ))}
-      </Swiper>
-      <CustomBg style={{ border: "solid red" }}>
+      <BannerSlider data={bannersData} />
+      <CustomBg>
         <Box style={{ backgroundColor: "#141414" }}>
           <Box style={{ marginBottom: 100 }}>
             <Typography color="#fff">Top Relateds</Typography>
-            <Carousel data={mockRelateds} />
+            <Carousel data={relatedsData} />
           </Box>
           <Box style={{ marginBottom: 100 }}>
             <Typography color="#fff">Top Relateds</Typography>
-            <Carousel data={mockTrending} />
+            <Carousel data={trendingData} />
           </Box>
           <Box style={{ marginBottom: 100 }}>
             <Typography color="#fff">Top Relateds</Typography>
             <Carousel
               height={320}
               customPath={"poster_path"}
-              data={mockBigCarousel}
+              data={customSizeCarouselData}
             />
           </Box>
           <Box style={{ marginBottom: 100 }}>
             <Typography color="#fff">Top Relateds</Typography>
-            <Carousel data={mockTrending} />
+            <Carousel data={trendingData} />
           </Box>
         </Box>
       </CustomBg>

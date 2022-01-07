@@ -5,12 +5,12 @@ import { Container } from "./styles";
 import { MdPlayArrow, MdInfoOutline } from "react-icons/md";
 import { Grid, Typography } from "@mui/material";
 
-const Banner = ({ data }) => {
+const Banner = ({ data, theme }) => {
   const { title, description, bgImage } = data;
   return (
     <>
       <Container style={{ display: "flex" }}>
-        <Card bgImage={bgImage} bgColor="#141414" padding="60px">
+        <Card bgImage={bgImage} bgColor={theme?.colors?.black} padding="60px">
           <Grid
             container
             direction="row"

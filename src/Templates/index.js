@@ -6,7 +6,6 @@ import { Home, Details } from "../Pages";
 const TemplateHome = () => {
   return (
     <ClubContentProvider>
-      <Header />
       <Home />
     </ClubContentProvider>
   );

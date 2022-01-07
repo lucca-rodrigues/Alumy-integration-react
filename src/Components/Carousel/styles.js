@@ -2,27 +2,19 @@ import { styled } from "@mui/styles";
 import { Swiper } from "swiper/react";
 
 const CarouselContainer = styled("div")({
-  // boxShadow: "9px -103px 83px 14px #141414",
-  // backgroundColor: "#141414",
   display: "block",
-  /* position: relative */
   zIndex: 9999999,
-  // maxWidth: "95%",
   margin: "0 auto",
+  backgroundColor: (theme) => theme?.colors?.black,
 });
 
 const CarouselBox = styled(Swiper)({
   height: (props) => props.height ?? 125,
-  // boxShadow: "9px -103px 83px 14px #141414",
-  // backgroundColor: "#141414",
-  // display: "block",
-  // zIndex: 9999999,
 
   "& .swiper-slide": {
     height: (props) => props.height ?? "100px",
 
-    // boxShadow: "9px -103px 83px 14px #141414",
-    backgroundColor: "#141414",
+    backgroundColor: (theme) => theme?.colors?.black,
     display: "block",
     margin: "5px!important",
     opacity: 1,
@@ -36,7 +28,6 @@ const CarouselBox = styled(Swiper)({
 
       "& .slider-text": {
         display: "block",
-        // transition: "all 0.4s ease",
       },
     },
 
@@ -57,7 +48,5 @@ const CarouselBox = styled(Swiper)({
   },
 });
 
-const CarouselItem = styled("div")({
-  border: "solid red",
-});
+const CarouselItem = styled("div")({});
 export { CarouselContainer, CarouselBox, CarouselItem };
