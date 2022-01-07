@@ -12,7 +12,7 @@ const CarouselContainer = styled("div")({
 });
 
 const CarouselBox = styled(Swiper)({
-  height: (props) => props.height ?? 130,
+  height: (props) => props.height ?? 125,
   // boxShadow: "9px -103px 83px 14px #141414",
   // backgroundColor: "#141414",
   // display: "block",
