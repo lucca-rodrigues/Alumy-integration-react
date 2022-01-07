@@ -1,4 +1,4 @@
-body{
+body, img, div{
   background-color: "#141414!important";
 }
 a{
@@ -8,7 +8,8 @@ a{
 
 .MuiBox-root.css-0{
   background-color: #141414!important;
-  box-shadow: 77px 112px 80px 124px #141414;
+  box-shadow: 0px -99px 300px 4px #141414;
   z-index: 99999;
   position: relative;
+  padding: 0 20px;
 }

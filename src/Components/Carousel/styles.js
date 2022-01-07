@@ -2,8 +2,8 @@ import { styled } from "@mui/styles";
 import { Swiper } from "swiper/react";
 
 const CarouselContainer = styled("div")({
-  boxShadow: "9px -103px 83px 14px #141414",
-  backgroundColor: "#141414",
+  // boxShadow: "9px -103px 83px 14px #141414",
+  // backgroundColor: "#141414",
   display: "block",
   /* position: relative */
   zIndex: 9999999,
