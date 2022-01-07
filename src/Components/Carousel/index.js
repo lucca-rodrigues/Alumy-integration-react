@@ -25,6 +25,7 @@ const Carousel = ({ data, customPath, ...props }) => {
             {data?.map((item) => (
               <SwiperSlide key={item?.id}>
                 <Card
+                  borderRadius={20}
                   bgSize="contain"
                   bgImage={`${baseUrl}${
                     item?.[customPath] ?? item?.backdrop_path

@@ -18,7 +18,7 @@ const Banner = ({ data, theme }) => {
             alignItems="center"
             className="banner-container"
           >
-            <Grid item lg={6} md={12} sm={12}>
+            <Grid item xl={4} lg={6} md={12} sm={12}>
               <Typography
                 component="h1"
                 variant="h2"
@@ -30,6 +30,7 @@ const Banner = ({ data, theme }) => {
             </Grid>
             <Grid
               item
+              xl={12}
               lg={12}
               md={12}
               sm={12}
@@ -50,6 +51,7 @@ const Banner = ({ data, theme }) => {
             </Grid>
             <Grid
               item
+              xl={3}
               lg={4}
               md={6}
               sm={12}
