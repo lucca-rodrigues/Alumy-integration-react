@@ -10,11 +10,14 @@ a{
   background-color: #141414!important;
 }
 
-.MuiBox-root.css-0{
-  box-shadow: 0px -99px 300px 4px #141414;
-  z-index: 99999;
+.ForwardRef\(Grid\)-root-35.MuiGrid-root.css-vj1n65-MuiGrid-root:before {
+  content: "";
   position: relative;
-  height: 100%;
+  display: flex;
+  height: 40px;
+  z-index: 99999999999;
+  opacity: 0.8;
+  box-shadow: 0px -116px 200px 100px #141414;
 }
 .header{
   position: fixed;
