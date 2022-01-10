@@ -32,24 +32,32 @@ const Home = () => {
       <BannerCarousel data={bannersData} />
       <CustomBg>
         <Box style={{ backgroundColor: "#141414" }}>
-          <Box style={{ marginBottom: 100 }}>
-            <Typography color="#fff">Top Relateds</Typography>
+          <Box style={{ marginBottom: 50 }}>
+            <Typography color="#fff" variant="p" fontWeight={600}>
+              Top Relateds
+            </Typography>
             <Carousel data={relatedsData} />
           </Box>
-          <Box style={{ marginBottom: 100 }}>
-            <Typography color="#fff">Top Relateds</Typography>
+          <Box style={{ marginBottom: 50 }}>
+            <Typography color="#fff" variant="p" fontWeight={600}>
+              Trending Now
+            </Typography>
             <Carousel data={trendingData} />
           </Box>
-          <Box style={{ marginBottom: 100 }}>
-            <Typography color="#fff">Top Relateds</Typography>
+          <Box style={{ marginBottom: 50 }}>
+            <Typography color="#fff" variant="p" fontWeight={600}>
+              Originals
+            </Typography>
             <Carousel
               height={320}
               customPath={"poster_path"}
               data={customSizeCarouselData}
             />
           </Box>
-          <Box style={{ marginBottom: 100 }}>
-            <Typography color="#fff">Top Relateds</Typography>
+          <Box style={{ marginBottom: 50 }}>
+            <Typography color="#fff" variant="p" fontWeight={600}>
+              Top Relateds
+            </Typography>
             <Carousel data={trendingData} />
           </Box>
         </Box>

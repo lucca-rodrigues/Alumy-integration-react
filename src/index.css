@@ -32,3 +32,28 @@ a{
   transition: all 0.4s ease;
   background-color: transparent;
 }
+
+@media (max-width: 1200px) {
+  h1{
+    font-size: 50px!important;
+  }
+  .swiper-slide .slider-text{
+    font-size: 15px!important;
+    line-height: 20px;
+    height: fit-content!important;
+  }
+
+  .swiper-slide:hover .slider-text{
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .swiper-slide:hover{
+    height: 100%!important;
+  } 
+
+  .swiper-slide .slider-text {
+    display: block!important;
+  }
+}

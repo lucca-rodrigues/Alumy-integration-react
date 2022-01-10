@@ -5,6 +5,7 @@ import { CarouselBox, CarouselContainer, CarouselItem } from "./styles";
 
 import { Card } from "../Card";
 import { SwiperSlide } from "swiper/react";
+import { Typography } from "@mui/material";
 
 const Carousel = ({ data, customPath, ...props }) => {
   const baseUrl = "https://image.tmdb.org/t/p/original/";
@@ -49,8 +50,9 @@ const Carousel = ({ data, customPath, ...props }) => {
                   }`}
                 >
                   <div className="slider-text">
-                    <p>{item?.original_title}</p>
-                    <strong>Movies</strong>
+                    <p>{item?.original_title ?? item?.name}</p>
+
+                    <Typography style={{ fontSize: 12 }}>Categoria</Typography>
                   </div>
                 </Card>
               </SwiperSlide>

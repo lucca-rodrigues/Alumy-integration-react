@@ -16,6 +16,8 @@ export const MaterialUICard = withStyles((theme) => ({
 
     [theme.breakpoints.down("lg")]: {
       backgroundPosition: "center",
+      backgroundSize: "cover!important",
+      padding: "0px 30px!important",
     },
   },
 }))(Card);

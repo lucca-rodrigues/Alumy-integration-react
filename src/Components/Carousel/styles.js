@@ -6,6 +6,14 @@ const CarouselContainer = styled("div")({
   zIndex: 9999999,
   margin: "0 auto",
   backgroundColor: (theme) => theme?.colors?.black,
+
+  "& .swiper-button-next, .swiper-button-prev": {
+    color: "#fff!important",
+  },
+
+  "& .swiper-scrollbar": {
+    display: "none!important",
+  },
 });
 
 const CarouselBox = styled(Swiper)({
