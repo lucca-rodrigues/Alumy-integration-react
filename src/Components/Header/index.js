@@ -22,7 +22,9 @@ const Header = () => {
     if (window.innerWidth < 768) {
       setHeaderClass("header-mobile");
     }
-    setHeaderClass("header-fixed");
+    if (!window.innerWidth > 768) {
+      setHeaderClass("header-fixed");
+    }
   }, []);
 
   const menuIcon = useCallback(() => {

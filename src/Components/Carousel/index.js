@@ -13,12 +13,29 @@ const Carousel = ({ data, customPath, ...props }) => {
       <CarouselContainer>
         <CarouselBox
           modules={[Navigation]}
-          slidesPerView={6}
           navigation={true}
           pagination={{ clickable: true }}
-          scrollbar={{ draggable: true }}
+          scrollbar={{ draggable: false }}
           onSwiper={(swiper) => {}}
           onSlideChange={() => {}}
+          breakpoints={{
+            300: {
+              width: 300,
+              slidesPerView: 1,
+            },
+            600: {
+              width: 600,
+              slidesPerView: 2,
+            },
+            900: {
+              width: 900,
+              slidesPerView: 3,
+            },
+            1200: {
+              width: 1200,
+              slidesPerView: 6,
+            },
+          }}
           {...props}
         >
           <CarouselItem>
