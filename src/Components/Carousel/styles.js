@@ -33,6 +33,7 @@ const CarouselBox = styled(Swiper)({
       transition: "all 0.4s ease",
       height: (props) => props.height ?? 200,
       zIndex: 1,
+      cursor: "pointer",
 
       "& .slider-text": {
         display: "block",
