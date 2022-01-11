@@ -49,7 +49,7 @@ const CarouselBox = styled(Swiper)({
       color: "#fff",
       width: "100%",
       height: (props) => props.height ?? "100%",
-      fontSize: "15px",
+      fontSize: "13px",
       fontWeight: "bold",
       textAlign: "left",
       display: "none",
