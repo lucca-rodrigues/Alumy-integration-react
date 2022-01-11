@@ -8,6 +8,7 @@ ReactDOM.render(
   <React.StrictMode>
     <ClubContentProvider
       dataTest={document.getElementById("root").getAttribute("dataTest")}
+      userName={document.getElementById("root").getAttribute("userName")}
     >
       <App />
     </ClubContentProvider>

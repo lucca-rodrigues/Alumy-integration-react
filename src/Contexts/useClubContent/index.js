@@ -8,7 +8,12 @@ import {
 
 const ClubContent = createContext({});
 
-const ClubContentProvider = ({ children, dataMockBanner, dataTest }) => {
+const ClubContentProvider = ({
+  children,
+  dataMockBanner,
+  dataTest,
+  userName,
+}) => {
   const [loading, setLoading] = useState(true);
   const bannersData = dataMockBanner ?? mockBanner;
   const relatedsData = mockRelateds;
@@ -28,6 +33,7 @@ const ClubContentProvider = ({ children, dataMockBanner, dataTest }) => {
         customSizeCarouselData,
         loading,
         setLoading,
+        loggedUserName: userName,
       }}
     >
       {children}

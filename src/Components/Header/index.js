@@ -5,10 +5,15 @@ import { Logo } from "./Components/Logo";
 import { Links } from "./Components/Links";
 import { MobileMenu } from "./Components/MobileMenu";
 import { MobileMenuIcons } from "./Components/MobileMenuIcons";
+import { useClubContent } from "../../Contexts/useClubContent";
 
 const Header = () => {
   const [headerClass, setHeaderClass] = useState("header");
   const [isOpenMenu, setIsOpenMenu] = useState(false);
+
+  const { loggedUserName } = useClubContent();
+
+  console.log("loggedUserName:", loggedUserName);
 
   window.onscroll = () => {
     if (window.scrollY > 150) {
@@ -47,7 +52,7 @@ const Header = () => {
           <Links />
         </Grid>
         <Grid item xs={6} style={{ textAlign: "right" }}>
-          User menu
+          {loggedUserName ?? "User Menu"}
         </Grid>
       </Hidden>
       <Hidden lgUp>
