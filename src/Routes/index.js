@@ -1,11 +1,11 @@
 import React from "react";
 import { Routes as Router, Route } from "react-router-dom";
-import { TemplateHome } from "../Templates";
+import { Home } from "../Pages";
 
 const Routes = () => {
   return (
     <Router>
-      <Route path="/" element={<TemplateHome />} />
+      <Route path="/" element={<Home />} />
       {/* <Route path="/details" element={<Details />} /> */}
     </Router>
   );

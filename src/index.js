@@ -6,7 +6,9 @@ import { App } from "./App";
 
 ReactDOM.render(
   <React.StrictMode>
-    <ClubContentProvider>
+    <ClubContentProvider
+      dataTest={document.getElementById("root").getAttribute("dataTest")}
+    >
       <App />
     </ClubContentProvider>
   </React.StrictMode>,

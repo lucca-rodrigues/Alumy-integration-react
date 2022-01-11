@@ -8,7 +8,6 @@ import { useClubContent } from "../../Contexts/useClubContent";
 import { Loading } from "../../Components/Loading";
 import { BannerCarousel } from "./Components/BannerCarousel";
 import { setTimeLoader } from "../../Utils/setTimeLoader";
-import zIndex from "@mui/material/styles/zIndex";
 
 const Home = () => {
   const {

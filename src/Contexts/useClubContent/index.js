@@ -1,4 +1,4 @@
-import React, { useContext, createContext, useState } from "react";
+import React, { useContext, createContext, useState, useEffect } from "react";
 import {
   mockBanner,
   mockBigCarousel,
@@ -8,12 +8,16 @@ import {
 
 const ClubContent = createContext({});
 
-const ClubContentProvider = ({ children }) => {
+const ClubContentProvider = ({ children, dataMockBanner, dataTest }) => {
   const [loading, setLoading] = useState(true);
-  const bannersData = mockBanner;
+  const bannersData = dataMockBanner ?? mockBanner;
   const relatedsData = mockRelateds;
   const trendingData = mockTrending;
   const customSizeCarouselData = mockBigCarousel;
+
+  useEffect(() => {
+    console.log("dataTest", dataTest);
+  }, [dataTest]);
 
   return (
     <ClubContent.Provider
