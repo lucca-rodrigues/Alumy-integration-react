@@ -49,11 +49,11 @@ const Carousel = ({ data, customPath, ...props }) => {
                     item?.[customPath] ?? item?.backdrop_path
                   }`}
                 >
-                  <div className="slider-text">
+                  {/* <div className="slider-text">
                     <p>{item?.original_title ?? item?.name}</p>
 
                     <Typography style={{ fontSize: 12 }}>Categoria</Typography>
-                  </div>
+                  </div> */}
                 </Card>
               </SwiperSlide>
             ))}

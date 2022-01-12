@@ -17,14 +17,6 @@ const mockBanner = [
     description: `Geralt of Rivia, a mutated monster-hunter for hire, journeys toward his destiny in a turbulent world where people often prove more wicked than beasts.`,
     url: "https://image.tmdb.org/t/p/original/",
   },
-  {
-    id: 3,
-    bgImage:
-      "https://image.tmdb.org/t/p/original//hv7o3VgfsairBoQFAawgaQ4cR1m.jpg",
-    title: "The Matrix Resurrections",
-    description: `Plagued by strange memories, Neo's life takes an unexpected turn when he finds himself back inside the Matrix.`,
-    url: "https://image.tmdb.org/t/p/original/",
-  },
 ];
 
 export { mockBanner };
