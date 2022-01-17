@@ -5,7 +5,6 @@ import { CarouselBox, CarouselContainer, CarouselItem } from "./styles";
 
 import { Card } from "../Card";
 import { SwiperSlide } from "swiper/react";
-import { Typography } from "@mui/material";
 
 const Carousel = ({ data, customPath, ...props }) => {
   const baseUrl = "https://image.tmdb.org/t/p/original/";

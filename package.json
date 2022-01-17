@@ -45,6 +45,7 @@
     ]
   },
   "devDependencies": {
+    "@emotion/styled": "^11.6.0",
     "swiper": "^7.4.1"
   }
 }
