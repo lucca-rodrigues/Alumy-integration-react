@@ -10,6 +10,9 @@ Este é um projeto front-end para uma plataforma que tem a necessidade de uma in
 - Aplicação será executada na seguinte url: 
 ```sh http://localhost:3000/```
 
+## App em prod
+- Se não quiser rodar o projeto em sua máquina, acesse o deploy diretamente por este <a target_blank href="https://alumy-integration-react.netlify.app/">Link</a>
+
 ## Sreenshots
 <img src="./src/Assets/screen-001.png">
 <hr/>
