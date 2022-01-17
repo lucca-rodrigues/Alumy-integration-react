@@ -7,7 +7,6 @@
   },
   "private": true,
   "dependencies": {
-    "@emotion/styled": "^11.6.0",
     "@mui/material": "^5.2.6",
     "@mui/styles": "^5.2.3",
     "@testing-library/jest-dom": "^5.16.1",
