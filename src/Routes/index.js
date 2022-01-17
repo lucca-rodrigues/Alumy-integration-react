@@ -6,7 +6,6 @@ const Routes = () => {
   return (
     <Router>
       <Route path="/" element={<Home />} />
-      {/* <Route path="/details" element={<Details />} /> */}
     </Router>
   );
 };
