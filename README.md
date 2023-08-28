@@ -16,4 +16,4 @@ Este é um projeto front-end para uma plataforma que tem a necessidade de uma in
 ## Sreenshots
 <img src="./src/Assets/screen-001.png">
 <hr/>
-<img src="./src/Assets/screen-002.png">
+<img src="./src/Assets/screen-002.png">.
